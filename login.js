@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const phoneInput = document.getElementById('phone');
   const passwordInput = document.getElementById('password');
   const errorMessage = document.getElementById('error-message');
+  const successMessage = document.getElementById('success-message');
+
 
   signupButton.addEventListener('click', function () {
       // Reset error message
@@ -25,21 +27,30 @@ document.addEventListener('DOMContentLoaded', function () {
       // Validate email format
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(emailInput.value)) {
-          errorMessage.textContent = 'Invalid email format';
+          errorMessage.textContent = 'Invalid email format !';
           return;
       }
 
       // Validate phone number (10 digits)
-      if (phoneInput.value.length !== 10 || isNaN(phoneInput.value)) {
-          errorMessage.textContent = 'Phone number should have 10 digits';
+      else if (phoneInput.value.length !== 10 || isNaN(phoneInput.value)) {
+          errorMessage.textContent = 'Phone number should have 10 digits !';
           return;
       }
 
       // Validate password strength (at least 8 characters)
-      if (passwordInput.value.length < 8) {
-          errorMessage.textContent = 'Password should be at least 8 characters';
+      else if (passwordInput.value.length < 8) {
+          errorMessage.textContent = 'Password should be at least 8 characters !';
           return;
       }
+
+      else {
+        successMessage.textContent = 'Account created, please Sign In !';
+        setTimeout(function() {
+          container.classList.remove("right-panel-active");
+        }, 3000); 
+        return;
+      }
+      
 
       // If all validations pass, you can proceed with the signup logic
       // Add your signup code here, e.g., sending data to the server
@@ -51,3 +62,13 @@ document.addEventListener('DOMContentLoaded', function () {
       passwordInput.value = '';
   });
 });
+
+
+
+
+
+
+let SubMenu=document.getElementById("subMenu");
+function toggleMenu(){
+    SubMenu.classList.toggle("open-menu");
+}

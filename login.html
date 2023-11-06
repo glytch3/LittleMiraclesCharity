@@ -20,6 +20,23 @@
             <a href="contact.html">CONTACT</a>
             <a href="faq.html">FAQ</a>
         </div>
+        <div>
+            <a><img src="images/profileavatar.png" class="profilepic" onclick="toggleMenu()"></a>
+        </div>
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <a href="pp.html" class="sub-menu-link">
+                    <img src="images/privacypolicy.png">
+                    <p>Privacy Policy</p>
+                    <span>></span>
+                </a>
+                <a href="tnc.html" class="sub-menu-link">
+                    <img src="images/termsandcondition.png">
+                    <p>Terms and Condition</p>
+                    <span>></span>
+                </a>
+            </div>
+        </div>
     </nav>
 
     <h2>Member Access <p>Access a world of Possibilities</p>
@@ -39,7 +56,8 @@
                 <input type="tel" id="phone" placeholder="Phone Number" />
                 <input type="password" id="password" placeholder="Password" />
                 <button id="signup-btn">Sign Up</button>
-                <div id="error-message"></div>                
+                <div id="error-message" class="error-message-class"></div>     
+                <div id="success-message" class="success-message-class"></div>            
             </form>
         </div>
         <div class="form-container sign-in-container">
