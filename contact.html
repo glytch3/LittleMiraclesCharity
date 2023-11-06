@@ -14,6 +14,9 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
 </head>
 <body>
     <!-- ----------------------------------------NAVBAR----------------------------------------------------->
@@ -31,18 +34,81 @@
     </nav>
     <!-- --------------------------------------------CONTACT-------------------------------------------------------->
     <div class="contact_container" style="padding-top:100px;">
-        <h2>CONTACT US</h2>
+        <h2 class="contact_our_address">OUR ADDRESS</h2>
         <div class="g_map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3340544.4960977174!2d-121.88102652009785!3d35.150373310697375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fba02425dad8f%3A0x6c296c66619367e0!2sGoogleplex!5e0!3m2!1sen!2sin!4v1628463464648!5m2!1sen!2sin" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-        <div class="contact_content">
-            <p>We want to hear from you! Drop us a note and someone from our team will get back to you.
-                Looking to volunteer or supporting us in any other ways? Call +1111100000
-                Have a question that involves Charity Jet? Please head on over to our Locations page to reach our locations.</p>
-            <p><b>Call: +111100000</b></p>
-            <p><b>Mail: support.charityjet@gmail.com</b></p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48611.57961457798!2d74.77092611511317!3d13.362259488795566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbca4a62155fbd3%3A0xbcc8a0d1bd36fba3!2sInnovation%20Centre%2C%20MAHE!5e0!3m2!1sen!2sin!4v1699198643785!5m2!1sen!2sin" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
+
+    <section class="text-gray-600 body-font bg-green-300">
+        <div class="container flex flex-col md:flex-row lg:max-w-5xl w-full px-5 py-12 md:py-24 mx-auto section"
+            id="contact-form">
+            <div class="md:w-1/3 w-full">
+                <h1 class="text-4xl text-gray-800 sm:text-4xl font-bold title-font mb-4">Contact Us</h1>
+                <p class="leading-relaxed text-xl text-gray-900">
+                    We're here to assist you! If you have any questions or need assistance, please feel free to reach out to
+                    us.
+                    <br><br>
+                    You can also email us
+                       <a href="https://veilmail.io/e/FkKh7o" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">click here to reveal our protected email address</a>
+        
+                </p>
+                <p class="leading-relaxed text-xl text-gray-900 mt-8">
+                    We use VeilMail.io to protect your email address from being scraped.
+                </p>
+                <span class="inline-flex mt-6 justify-center sm:justify-start">
+                    <a class="text-gray-500 hover:text-gray-900" target="_blank" href="https://twitter.com/example">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-6 h-6" viewBox="0 0 24 24">
+                            <path
+                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-500 hover:text-gray-900" href="https://www.instagram.com/example/"
+                        target="_blank">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                        </svg>
+                    </a>
+                </span>
+            </div>
+            <div class="md:w-2/3 w-full mt-10 md:mt-0 md:pl-28">
+                <h1 class="text-4xl text-gray-800 sm:text-4xl font-bold title-font mb-4">Contact Form</h1>
+                <form action="send-contact.php" method="post" id="submit-contact-form">
+                    <div class="p-2 w-full">
+                        <div class="relative">
+                            <label for="name" class="leading-7 py-4 text-lg text-gray-900">Your Name</label>
+                            <input type="text" id="name" name="name" required=""
+                                class="w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
+                        </div>
+                    </div>
+                    <div class="p-2 w-full">
+                        <div class="relative">
+                            <label for="email" class="leading-7 py-4 text-lg text-gray-900">Your Email</label>
+                            <input type="email" id="email" name="email" required=""
+                                class="w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
+                        </div>
+                    </div>
+                    <div class="p-2 w-full">
+                        <div class="relative">
+                            <label for="message" class="leading-7 py-4 text-lg text-gray-900">Your Message</label>
+                            <textarea id="message" name="message" required=""
+                                class="w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-gray-900 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out "></textarea>
+                        </div>
+                    </div>
+                    <div class="p-2 w-full">
+                        <button type="submit"
+                            class="flex text-white bg-gray-900 border-0 py-4 px-6 focus:outline-none hover:bg-blue-900 rounded text-xl font-bold shadow-lg mx-0 flex-col text-center g-recaptcha">
+                            Send Message ✉
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
     <!-- --------------------------------------------FOOTER-------------------------------------------------------->
     <footer>
         <div class="pages"> 

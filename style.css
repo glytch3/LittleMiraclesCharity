@@ -11,7 +11,9 @@ body {
     display: flex;
     box-shadow: 0px 3px 65px 0px rgba(0, 0, 0, 0.856);
 }
-
+.nav:hover a{
+    text-decoration: none;
+}
 .nav_top {
     position: fixed;
     top: 0;
@@ -33,7 +35,7 @@ body {
 .nav_side {
     float: right;
     width: 45%;
-    margin-top: 20px;
+    margin-top: 27px;
 }
 
 .nav_side a {
@@ -504,7 +506,7 @@ footer p {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 180vh;
+    height: 84vh;
     margin-top: -1.5%;
     color: white;
 }
@@ -529,6 +531,11 @@ footer p {
     padding: 15px;
     font-size: 20px;
     line-height: 25px;
+}
+
+.contact_our_address {
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 /*--------------------------------------------CATERING---------------------------------------*/
@@ -594,72 +601,76 @@ footer p {
 
 /* WhatsApp Icon CSS */
 .btn-whatsapp-pulse {
-	background: #25d366;
-	color: white;
-	position: fixed;
-	bottom: 20px;
-	left: 20px;
-	font-size: 40px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 0;
-	height: 0;
-	padding: 35px;
-	text-decoration: none;
-	border-radius: 50%;
-	animation-name: pulse;
-	animation-duration: 1.5s;
-	animation-timing-function: ease-out;
-    animation-iteration-count: 3; 
+    background: #25d366;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    height: 0;
+    padding: 35px;
+    text-decoration: none;
+    border-radius: 50%;
+    animation-name: pulse;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 3;
 }
 
 @keyframes pulse {
-	0% {
-		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
-	}
-	80% {
-		box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
-	}
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    }
+
+    80% {
+        box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+    }
 }
 
 .btn-whatsapp-pulse-border {
-	bottom: 120px;
-	right: 20px;
-	animation-play-state: paused;
+    bottom: 120px;
+    right: 20px;
+    animation-play-state: paused;
 }
 
 .btn-whatsapp-pulse-border::before {
-	content: "";
-	position: absolute;
-	border-radius: 50%;
-	padding: 25px;
-	border: 5px solid #25d366;
-	opacity: 0.75;
-	animation-name: pulse-border;
-	animation-duration: 1.5s;
-	animation-timing-function: ease-out;
-    animation-iteration-count: 3; 
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    padding: 25px;
+    border: 5px solid #25d366;
+    opacity: 0.75;
+    animation-name: pulse-border;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 3;
 }
 
 @keyframes pulse-border {
-	0% {
-		padding: 25px;
-		opacity: 0.75;
-	}
-	75% {
-		padding: 50px;
-		opacity: 0;
-	}
-	100% {
-		opacity: 0;
-	}
+    0% {
+        padding: 25px;
+        opacity: 0.75;
+    }
+
+    75% {
+        padding: 50px;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 
 /* Phone Icon CSS */
 .btn-phone-pulse {
-    background: #007bff; /* You can change the background color as needed */
+    background: #007bff;
+    /* You can change the background color as needed */
     color: white;
     position: fixed;
     bottom: 20px;
@@ -676,7 +687,7 @@ footer p {
     animation-name: pulse;
     animation-duration: 1.5s;
     animation-timing-function: ease-out;
-    animation-iteration-count: 3;     
+    animation-iteration-count: 3;
 }
 
 
@@ -689,7 +700,8 @@ footer p {
     /* Adjust the bottom position as needed */
     z-index: 1000;
     cursor: pointer;
-    background: #0074e1; /* Change the background color as needed */
+    background: #0074e1;
+    /* Change the background color as needed */
     color: white;
     position: fixed;
     bottom: 20px;
@@ -706,7 +718,7 @@ footer p {
     animation-name: pulse;
     animation-duration: 1.5s;
     animation-timing-function: ease-out;
-    animation-iteration-count: 3; 
+    animation-iteration-count: 3;
 }
 
 
@@ -714,16 +726,101 @@ footer p {
 
 /* language-change */
 .language-change {
-    font-size: 16px; /* Increase the font size as desired */
+    font-size: 16px;
+    /* Increase the font size as desired */
     color: #ccc;
     text-align: center;
 }
 
 .language-change label {
     margin-right: 10px;
-    font-weight: bold;        
+    font-weight: bold;
 }
 
 .language-change #google_translate_element {
-    font-size: 16px; /* Increase the font size as desired */
+    font-size: 16px;
+    /* Increase the font size as desired */
+}
+
+
+
+
+/* profilepic */
+.profilepic {
+    width: 35px;
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+/* submenu */
+.sub-menu-wrap {
+    position: absolute;
+    top: 100%;
+    right: 5%;
+    width: 320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+.sub-menu-wrap.open-menu{
+    max-height: 400px;
+}
+.sub-menu {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+}
+.sub-menu:hover a{
+    text-decoration: none;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info h3 {
+    font-weight: 500;
+    font-size: 17px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.user-info img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.sub-menu hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 15px 0px 10px;
+}
+.sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+    margin: 12px 0;
+}
+.sub-menu-link p{
+    width: 100%;
+    padding-top: 10px;
+}
+.sub-menu-link img{
+    width: 40px;
+    padding: 8px;
+    margin-right: 10px;
+}
+.sub-menu-link span{
+    font-size: 18px;
+    transition: transform 0.5s;
+}
+.sub-menu-link:hover span{
+    transform: translateX(5px);
+}
+.sub-menu-link:hover p{
+    font-weight: 600;
 }

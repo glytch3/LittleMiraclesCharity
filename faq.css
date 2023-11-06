@@ -23,9 +23,9 @@ Primary style
   
   body {
     font-size: 100%;
-    font-family: "kievit-regular", sans-serif;
-    color: #4e5359;
-    background-color: #000001;
+    font-family: "sans-serif", sans-serif;
+    color: #fffefe;
+    background-color: #000000;
   }
   body::after {
     /* overlay layer visible on small devices when the right panel slides in */
@@ -55,7 +55,7 @@ Primary style
   }
   
   a {
-    color: #60741a;
+    color: #2e2e2e;
     text-decoration: none;
   }
   
@@ -66,13 +66,14 @@ Primary style
   -------------------------------- */
   header {
     position: relative;
+    margin-top: 70px;
     height: 180px;
     line-height: 180px;
     text-align: center;
-    background-color: rgb(47, 133, 51);
+    background-color: #6ee7b7;
   }
   header h1 {
-    color: #ffffff;
+    color: #000000;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 20px;
@@ -395,7 +396,7 @@ Primary style
   @media only screen and (min-width: 768px) {
     .trigger {
       font-size: 24px;
-      font-size: 1.5rem;
+      font-size: 1rem;
       font-weight: 300;
       margin: 0;
       padding: 24px 72px 24px 24px;
