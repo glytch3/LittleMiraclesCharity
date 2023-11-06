@@ -72,8 +72,8 @@
                             href="#account-change-password">Change password</a>
                         <a class="list-group-item list-group-item-action" data-toggle="list"
                             href="#account-info">Info</a>
-                        <a class="list-group-item list-group-item-action" data-toggle="list"
-                            href="#account-social-links">Social links</a>
+                        <!-- <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-social-links">Social links</a> -->
                         <a class="list-group-item list-group-item-action" data-toggle="list"
                             href="#account-connections">Connections</a>
                         <a class="list-group-item list-group-item-action" data-toggle="list"
@@ -82,6 +82,8 @@
                             href="#account-card-details">Card Details</a>
                         <a class="list-group-item list-group-item-action" data-toggle="list"
                             href="#account-auto-donate">Auto Donate</a>
+                            <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-setting">Settings</a>
 
                     </div>
                 </div>
@@ -233,6 +235,7 @@
                                     <strong>Instagram</strong></button>
                             </div>
                         </div>
+
                         <div class="tab-pane fade" id="account-notifications">
                             <div class="card-body pb-2">
                                 <h6 class="mb-4">Activity</h6>
@@ -243,7 +246,7 @@
                                             <span class="switcher-yes"></span>
                                             <span class="switcher-no"></span>
                                         </span>
-                                        <span class="switcher-label">Email me when someone comments on my article</span>
+                                        <span class="switcher-label">Email on successful auto donation</span>
                                     </label>
                                 </div>
                                 <div class="form-group">
@@ -253,27 +256,12 @@
                                             <span class="switcher-yes"></span>
                                             <span class="switcher-no"></span>
                                         </span>
-                                        <span class="switcher-label">Email me when someone answers on my forum
-                                            thread</span>
+                                        <span class="switcher-label">Email weekly blog digest</span>
                                     </label>
                                 </div>
                                 <div class="form-group">
                                     <label class="switcher">
                                         <input type="checkbox" class="switcher-input">
-                                        <span class="switcher-indicator">
-                                            <span class="switcher-yes"></span>
-                                            <span class="switcher-no"></span>
-                                        </span>
-                                        <span class="switcher-label">Email me when someone follows me</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <hr class="border-light m-0">
-                            <div class="card-body pb-2">
-                                <h6 class="mb-4">Application</h6>
-                                <div class="form-group">
-                                    <label class="switcher">
-                                        <input type="checkbox" class="switcher-input" checked>
                                         <span class="switcher-indicator">
                                             <span class="switcher-yes"></span>
                                             <span class="switcher-no"></span>
@@ -281,27 +269,8 @@
                                         <span class="switcher-label">News and announcements</span>
                                     </label>
                                 </div>
-                                <div class="form-group">
-                                    <label class="switcher">
-                                        <input type="checkbox" class="switcher-input">
-                                        <span class="switcher-indicator">
-                                            <span class="switcher-yes"></span>
-                                            <span class="switcher-no"></span>
-                                        </span>
-                                        <span class="switcher-label">Weekly product updates</span>
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="switcher">
-                                        <input type="checkbox" class="switcher-input" checked>
-                                        <span class="switcher-indicator">
-                                            <span class="switcher-yes"></span>
-                                            <span class="switcher-no"></span>
-                                        </span>
-                                        <span class="switcher-label">Weekly blog digest</span>
-                                    </label>
-                                </div>
                             </div>
+                            <hr class="border-light m-0">
                         </div>
 
                         <div class="tab-pane fade" id="account-card-details">
@@ -342,7 +311,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="">
                                     <label class="form-check-label" for="autoDonateCheck">I agree to use my debit card
-                                        for auto donate</label>
+                                        for Auto Donate</label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="autoDonateCheck">
@@ -397,6 +366,32 @@
                             </div>
                         </div>
 
+                        <div class="tab-pane fade" id="account-setting">
+                            <div class="card-body pb-2">
+                                <h6 class="mb-4">Account Settings</h6>
+                                <div class="form-group">
+                                    <label class="switcher">
+                                        <input type="checkbox" class="switcher-input" unchecked>
+                                        <span class="switcher-indicator">
+                                            <span class="switcher-yes"></span>
+                                            <span class="switcher-no"></span>
+                                        </span>
+                                        <span class="switcher-label">Donate anonymously</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="switcher">
+                                        <input type="checkbox" class="switcher-input" unchecked>
+                                        <span class="switcher-indicator">
+                                            <span class="switcher-yes"></span>
+                                            <span class="switcher-no"></span>
+                                        </span>
+                                        <span class="switcher-label">Show contacts to others</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <hr class="border-light m-0">
+                        </div>
 
                     </div>
                 </div>
