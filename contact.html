@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Charity Jet | Contact</title>
+    <title>Little Miracles Charity | Contact</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Latest compiled and minified CSS -->
@@ -87,7 +87,7 @@
         
                 </p>
                 <p class="leading-relaxed text-xl text-gray-900 mt-8">
-                    We use VeilMail.io to protect your email address from being scraped.
+                    We protect your email address from being scraped.
                 </p>
                 <span class="inline-flex mt-6 justify-center sm:justify-start">
                     <a class="text-gray-500 hover:text-gray-900" target="_blank" href="https://twitter.com/example">
@@ -144,9 +144,11 @@
     </section>
     <!-- --------------------------------------------FOOTER-------------------------------------------------------->
     <footer>
-        <div class="pages"> 
-            <a href="index.html"><img class="aimg" src="images/logo.png" width="250"></a> 
-            <p>Charity Jet cares for needy children by empowering their caregivers to do their best work, with compassion, grace, integrity and excellence. Our end goal is to support children worldwide and see every child reach the potential that God has for them.</p>
+        <div class="pages">
+            <a href="index.html"><img class="aimg" src="images/logo.png" width="250"></a>
+            <p>Little Miracles Charity cares for needy children by empowering their caregivers to do their best work, with
+                compassion, grace, integrity and excellence. Our end goal is to support children worldwide and see every
+                child reach the potential that God has for them.</p>
             <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
             <a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
             <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
@@ -161,9 +163,10 @@
         </div>
         <div class="contact">
             <h3>Contact Us</h3>
-            <a href="contact" target="_blank">4486 Richards Avenue, Modesto CA - 95354</a>
-            <a href="tel: +910000000000">200-000-0000</a>
-            <a href="mailto: ppppppp@gmail.com">charityjet@gmail.com</a>
+            <a href="contact" target="_blank">MIT Manipal, Udupi, Karnataka</a>
+            <a href="#">Post Box : 576105</a>
+            <a href="tel: +919705324567">9705324567</a>
+            <a href="mailto: support@littlemiraclescharity.com">support@littlemiraclescharity.com</a>
         </div>
         <div class="social">
             <h3>Support</h3>
@@ -172,8 +175,23 @@
                 <a href="donate.html">JOIN US TODAY</a>
             </div>
         </div>
+        <div class="language-change">
+            <label for="google_translate_element">Change Language :</label>
+            <div id="google_translate_element"></div>
+        </div>
         <hr>
-        <p>Copyright &copy; 2021 Charity Jet. All rights reserved.</p>
+        <p>Copyright &copy; 2023 Little Miracles Charity. All rights reserved.</p>
     </footer>
+
+    <dialog id="successDialog">
+        <p style="font-weight: bold; color: rgb(9, 103, 9);">Message Sent ✔</p>
+    </dialog>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            document.getElementById('successDialog').showModal();
+        });
+    </script>
 </body>
 </html>
