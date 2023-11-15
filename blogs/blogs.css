@@ -1,0 +1,432 @@
+
+/*------------------------------------------------NAVBAR----------------------------------------*/
+.nav {
+    background-color: rgba(0, 0, 0, 0.856);
+    z-index: 9;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    box-shadow: 0px 3px 65px 0px rgba(0, 0, 0, 0.856);
+  }
+  .nav:hover a{
+    text-decoration: none;
+  }
+  .nav_top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+  
+  .logo {
+    float: left;
+    width: 50%;
+  }
+  
+  .logo img {
+    padding: 8px;
+    width: 30%;
+    margin-left: 10%;
+  }
+  
+  .nav_side {
+    float: right;
+    width: 45%;
+    margin-top: 27px;
+  }
+  
+  .nav_side a {
+    text-decoration: none;
+    margin-right: 10px;
+    margin-left: 50px;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-left: 15px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+  }
+  
+  .nav_side a:hover {
+    color: rgb(79, 255, 88);
+    transition: all 1s ease;
+  }
+  
+  
+  /* profilepic */
+  .profilepic {
+    width: 35px;
+    padding-top: 20px;
+    cursor: pointer;
+  }
+  
+  /* submenu */
+  .sub-menu-wrap {
+    position: absolute;
+    top: 100%;
+    right: 5%;
+    width: 320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+  .sub-menu-wrap.open-menu{
+    max-height: 400px;
+  }
+  .sub-menu {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+  }
+  .sub-menu:hover a{
+    text-decoration: none;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    color: #000000;
+  }
+  
+  .user-info h3 {
+    font-weight: 500;
+    font-size: 17px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+  
+  .user-info img {
+    width: 50px;
+    margin-right: 10px;
+  }
+  
+  .sub-menu hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 15px 0px 10px;
+  }
+  .sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+    margin: 12px 0;
+  }
+  .sub-menu-link p{
+    width: 100%;
+    padding-top: 10px;
+  }
+  .sub-menu-link img{
+    width: 40px;
+    padding: 8px;
+    margin-right: 10px;
+  }
+  .sub-menu-link span{
+    font-size: 18px;
+    transition: transform 0.5s;
+  }
+  .sub-menu-link:hover span{
+    transform: translateX(5px);
+  }
+  .sub-menu-link:hover p{
+    font-weight: 600;
+  }
+  
+  
+
+
+
+/* chatbox */
+.chatbox {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 300px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.chatbox-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbox-body {
+    padding: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.chatbox-messages {
+    margin-bottom: 10px;
+}
+
+.chat-input {
+    width: 80%;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.send-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.close-chatbox {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* WhatsApp Icon CSS */
+.btn-whatsapp-pulse {
+    background: #25d366;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    height: 0;
+    padding: 35px;
+    text-decoration: none;
+    border-radius: 50%;
+    animation-name: pulse;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 3;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    }
+
+    80% {
+        box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+    }
+}
+
+.btn-whatsapp-pulse-border {
+    bottom: 120px;
+    right: 20px;
+    animation-play-state: paused;
+}
+
+.btn-whatsapp-pulse-border::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    padding: 25px;
+    border: 5px solid #25d366;
+    opacity: 0.75;
+    animation-name: pulse-border;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 3;
+}
+
+@keyframes pulse-border {
+    0% {
+        padding: 25px;
+        opacity: 0.75;
+    }
+
+    75% {
+        padding: 50px;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* Phone Icon CSS */
+.btn-phone-pulse {
+    background: #007bff;
+    /* You can change the background color as needed */
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    left: 115px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    height: 0;
+    padding: 35px;
+    text-decoration: none;
+    border-radius: 50%;
+    animation-name: pulse;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 3;
+}
+
+
+/* Chatbot Icon CSS */
+.chatbot-icon {
+    position: fixed;
+    right: 20px;
+    /* Adjust the right position as needed */
+    bottom: 20px;
+    /* Adjust the bottom position as needed */
+    z-index: 1000;
+    cursor: pointer;
+    background: #0074e1;
+    /* Change the background color as needed */
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    height: 0;
+    padding: 35px;
+    text-decoration: none;
+    border-radius: 50%;
+    animation-name: pulse;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 3;
+}
+
+
+
+
+/* language-change */
+.language-change {
+    font-size: 16px;
+    /* Increase the font size as desired */
+    color: #ccc;
+    text-align: center;
+}
+
+.language-change label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.language-change #google_translate_element {
+    font-size: 16px;
+    /* Increase the font size as desired */
+}
+
+
+
+
+/* profilepic */
+.profilepic {
+    width: 35px;
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+/* submenu */
+.sub-menu-wrap {
+    position: absolute;
+    top: 100%;
+    right: 5%;
+    width: 320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+.sub-menu-wrap.open-menu{
+    max-height: 400px;
+}
+.sub-menu {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+}
+.sub-menu:hover a{
+    text-decoration: none;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info h3 {
+    font-weight: 500;
+    font-size: 17px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.user-info img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.sub-menu hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 15px 0px 10px;
+}
+.sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+    margin: 12px 0;
+}
+.sub-menu-link p{
+    width: 100%;
+    padding-top: 10px;
+}
+.sub-menu-link img{
+    width: 40px;
+    padding: 8px;
+    margin-right: 10px;
+}
+.sub-menu-link span{
+    font-size: 18px;
+    transition: transform 0.5s;
+}
+.sub-menu-link:hover span{
+    transform: translateX(5px);
+}
+.sub-menu-link:hover p{
+    font-weight: 600;
+}
+
+
+
+
+
+
+

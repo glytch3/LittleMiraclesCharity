@@ -48,50 +48,7 @@
 
 <body>
     <!-- ----------------------------------------NAVBAR----------------------------------------------------->
-    <nav class="nav nav_top">
-        <div class="logo">
-            <a href="index.html"><img src="images/logo.png" width="250"></a>
-        </div>
-        <div class="nav_side">
-            <a href="index.html">HOME</a>
-            <a href="about.html">ABOUT US</a>
-            <a href="donate.html">DONATE</a>
-            <a href="contact.html">CONTACT</a>
-            <a href="faq.html">FAQ</a>
-        </div>
-        <div>
-            <a><img src="images/profilepic.png" class="profilepic" onclick="toggleMenu()"></a>
-        </div>
-        <div class="sub-menu-wrap" id="subMenu">
-            <div class="sub-menu">
-                <div class="user-info">
-                    <img src="images/profilepic.png">
-                    <h3>George Russell</h3>
-                </div>
-                <hr>
-                <a href="profile.html" class="sub-menu-link">
-                    <img src="images/profileavatar.png">
-                    <p>Profile</p>
-                    <span>></span>
-                </a>
-                <a href="pp.html" class="sub-menu-link">
-                    <img src="images/privacypolicy.png">
-                    <p>Privacy Policy</p>
-                    <span>></span>
-                </a>
-                <a href="tnc.html" class="sub-menu-link">
-                    <img src="images/termsandcondition.png">
-                    <p>Terms and Condition</p>
-                    <span>></span>
-                </a>
-                <a href="login.html" class="sub-menu-link">
-                    <img src="images/logout.png">
-                    <p>Logout</p>
-                    <span>></span>
-                </a>
-            </div>
-        </div>
-    </nav>
+    <div id="navbar-container"></div>
     <!-- --------------------------------------------MAIN----------------------------------------------------------->
     <div class="main">
         <div class="main_content">
@@ -304,7 +261,12 @@
         <img src="https://cdn-icons-png.flaticon.com/512/4616/4616271.png" alt="Chatbot" width="50" height="50">
     </div>
 
-
+    <script>
+        $(function () {
+            // Load navbar.html
+            $("#navbar-container").load("/navbar/navbar.html");
+        });
+    </script>
     <script src="index.js"></script>
 
 </body>
