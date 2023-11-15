@@ -25,6 +25,7 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
         integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 
 
@@ -32,50 +33,8 @@
 
 <body>
     <!-- ----------------------------------------NAVBAR----------------------------------------------------->
-    <nav class="nav nav_top">
-        <div class="logo">
-            <a href="index.html"><img src="images/logo.png" width="250"></a>
-        </div>
-        <div class="nav_side">
-            <a href="index.html">HOME</a>
-            <a href="about.html">ABOUT US</a>
-            <a href="donate.html">DONATE</a>
-            <a href="contact.html">CONTACT</a>
-            <a href="faq.html">FAQ</a>
-        </div>
-        <div>
-            <a><img src="images/profilepic.png" class="profilepic" onclick="toggleMenu()"></a>
-        </div>
-        <div class="sub-menu-wrap" id="subMenu">
-            <div class="sub-menu">
-                <div class="user-info">
-                    <img src="images/profilepic.png">
-                    <h3>George Russell</h3>
-                </div>
-                <hr>
-                <a href="profile.html" class="sub-menu-link">
-                    <img src="images/profileavatar.png">
-                    <p>Profile</p>
-                    <span>></span>
-                </a>
-                <a href="pp.html" class="sub-menu-link">
-                    <img src="images/privacypolicy.png">
-                    <p>Privacy Policy</p>
-                    <span>></span>
-                </a>
-                <a href="tnc.html" class="sub-menu-link">
-                    <img src="images/termsandcondition.png">
-                    <p>Terms and Condition</p>
-                    <span>></span>
-                </a>
-                <a href="login.html" class="sub-menu-link">
-                    <img src="images/logout.png">
-                    <p>Logout</p>
-                    <span>></span>
-                </a>
-            </div>
-        </div>
-    </nav>
+    <div id="navbar-container"></div>
+
     <!-- --------------------------------------------MAIN----------------------------------------------------------->
     <div class="main_about">
         <div class="main_content_about">
@@ -258,6 +217,18 @@
     </div>
 
     <script src="index.js"></script>
+    <script>
+        $(function () {
+            // Load navbar.html
+            $("#navbar-container").load("/navbar/navbar.html");
+
+            // Load hero.html
+            $("#blog-container").load("/blogs/blog.html");
+
+            // Load footer.html
+            $("#footer-container").load("/footer/footer.html");
+        });
+    </script>
 </body>
 
 </html>

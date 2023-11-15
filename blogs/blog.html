@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,800&display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <link rel="stylesheet" href="style.css" />
 
@@ -197,6 +198,19 @@
 
         </div>
     </div>
+    <script>
+        $(function () {
+            // Load navbar.html
+            $("#navbar-container").load("/navbar/navbar.html");
+
+            // Load hero.html
+            $("#blog-container").load("/blogs/blog.html");
+
+            // Load footer.html
+            $("#footer-container").load("/footer/footer.html");
+        });
+    </script>
+
 </body>
 
 </html>
