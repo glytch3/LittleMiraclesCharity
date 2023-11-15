@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,12 +10,26 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <!-- Wa Logo theme -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+
 
 </head>
+
 <body>
     <!-- ----------------------------------------NAVBAR----------------------------------------------------->
     <nav class="nav nav_top">
@@ -65,7 +80,7 @@
     <div class="main_about">
         <div class="main_content_about">
             <h2>What We Do?</h2>
-        </h2>
+            </h2>
         </div>
     </div>
     <!-- -------------------------------------------ABOUT US--------------------------------------------------------->
@@ -113,7 +128,8 @@
     <footer>
         <div class="pages">
             <a href="index.html"><img class="aimg" src="images/logo.png" width="250"></a>
-            <p>Little Miracles Charity cares for needy children by empowering their caregivers to do their best work, with
+            <p>Little Miracles Charity cares for needy children by empowering their caregivers to do their best work,
+                with
                 compassion, grace, integrity and excellence. Our end goal is to support children worldwide and see every
                 child reach the potential that God has for them.</p>
             <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -150,6 +166,98 @@
         <p>Copyright &copy; 2023 Little Miracles Charity. All rights reserved.</p>
     </footer>
 
+    <!-- --------------------------------------------ICONS-------------------------------------------------------->
+    <!-- WhatsApp Icon HTML -->
+    <div id="whatsapp-icon" class="whatsapp-icon">
+        <a href="/images/LMCWa.html" class="btn-whatsapp-pulse">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+    <!-- Phone Icon HTML -->
+    <div id="phone-icon" class="phone-icon">
+        <a href="tel:9705324567" class="btn-phone-pulse">
+            <i class="fa fa-phone"></i>
+        </a>
+
+    </div>
+
+    <!-- Chatbot Icon HTML -->
+    <!-- Chatbot Icon HTML -->
+    <div id="chatbot-icon" class="chatbot-icon" onclick="openChatbox()">
+        <img src="https://cdn-icons-png.flaticon.com/512/4616/4616271.png" alt="Chatbot" width="50" height="50">
+    </div>
+    <!-- Chatbox HTML -->
+    <div id="chatbox" class="chatbox">
+        <div id="chatbox-header" class="chatbox-header">
+            <span>Chat with us</span>
+            <button id="close-chatbox" class="close-chatbox" onclick="closeChatbox()">&times;</button>
+        </div>
+        <div id="chatbox-body" class="chatbox-body">
+            <div id="chatbox-messages" class="chatbox-messages">
+                <!-- Messages will be displayed here -->
+            </div>
+        </div>
+        <div id="chatbox-footer" class="chatbox-footer">
+            <input type="text" id="chat-input" class="chat-input" placeholder="Type your message...">
+            <button id="send-button" class="send-button" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <!-- Chatbox JavaScript -->
+    <script>
+        // Chatbox elements
+        const chatbox = document.getElementById("chatbox");
+        const chatInput = document.getElementById("chat-input");
+        const chatboxMessages = document.getElementById("chatbox-messages");
+
+        // Function to open the chatbox
+        function openChatbox() {
+            chatbox.style.display = "block";
+        }
+
+        // Function to close the chatbox
+        function closeChatbox() {
+            chatbox.style.display = "none";
+        }
+
+        // Function to send a message
+        function sendMessage() {
+            const message = chatInput.value.trim().toLowerCase();
+            if (message !== "") {
+                const messageElement = document.createElement("div");
+                messageElement.className = "message";
+                messageElement.textContent = "You: " + message;
+                chatboxMessages.appendChild(messageElement);
+                chatInput.value = "";
+
+                // Check for user input and generate a response
+                if (message === "hi" || message === "hello") {
+                    setTimeout(() => generateResponse("Hi, how can I help you?"), 1000);
+                }
+            }
+        }
+
+        // Function to generate a chatbox response
+        function generateResponse(responseText) {
+            const responseElement = document.createElement("div");
+            responseElement.className = "message response";
+            responseElement.textContent = "Chatbot: " + responseText;
+            chatboxMessages.appendChild(responseElement);
+        }
+    </script>
+    <!-- WhatsApp Icon HTML -->
+    <div id="whatsapp-icon" class="whatsapp-icon">
+        <a href="/images/LMCWa.html" class="btn-whatsapp-pulse">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+    <!-- Phone Icon HTML -->
+    <div id="phone-icon" class="phone-icon">
+        <a href="tel:9705324567" class="btn-phone-pulse">
+            <i class="fa fa-phone"></i>
+        </a>
+    </div>
+
     <script src="index.js"></script>
 </body>
+
 </html>
